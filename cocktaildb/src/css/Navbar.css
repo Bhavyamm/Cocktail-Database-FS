@@ -1,0 +1,202 @@
+.nav__background {
+  /* background: linear-gradient(#14505c, #fff); */
+  background: #14505c;
+}
+
+.nav__main {
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+}
+
+.search-btn:hover {
+  background-color: #39a6a3;
+  color: white;
+}
+
+.search-input {
+  padding: 0.25em 1em;
+  border: 2px solid #39a6a3;
+  border-radius: 3px;
+  font-size: 1em;
+  background-color: rgb(52, 58, 64);
+  color: white;
+}
+
+.search-input:focus {
+  background-color: rgb(52, 58, 64);
+  color: white;
+}
+
+.dropOption:hover {
+  background-color: #151515;
+}
+
+.nav__main .nav__logo {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+.nav__background .nav__main .nav__logoIcon {
+  height: 40px;
+  object-fit: contain;
+  padding-left: 5px;
+}
+
+.nav__header {
+  color: #fff;
+  padding-top: 2rem;
+  padding-bottom: 0.01rem;
+  padding-left: 0;
+  padding-right: 0;
+  align-items: center;
+  /* margin-top: 10px; */
+}
+
+.nav__header .nav__container {
+  max-width: 1100px;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+  padding: 0px 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.nav__header .nav__container .nav__headerImage {
+  width: 200px;
+  justify-self: flex-end;
+}
+
+.nav__header .nav__container .nav__text {
+  margin: 10px 0;
+  font-size: 3rem;
+}
+
+.nav_container {
+  position: absolute;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 5px;
+  top: 0;
+  /* left: 0; */
+  right: 0;
+  /* bottom: 0; */
+  width: 300px;
+  height: 100px;
+}
+.nav_container .search {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  background: #7399b0;
+  border-radius: 50%;
+  transition: all 1s;
+  z-index: 4;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+}
+.nav_container .search:hover {
+  cursor: pointer;
+}
+.nav_container .search::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 22px;
+  right: 0;
+  bottom: 0;
+  left: 22px;
+  width: 12px;
+  height: 2px;
+  background: white;
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+.nav_container .search::after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: -5px;
+  right: 0;
+  bottom: 0;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: all 0.5s;
+}
+.nav_container input {
+  font-family: "Inconsolata", monospace;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: none;
+  background: #8ba2b0;
+  color: white;
+  text-shadow: 0 0 10px #8ba2b0;
+  padding: 0 80px 0 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 25px 0 #8ba2b0, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+  transition: all 1s;
+  opacity: 0;
+  z-index: 5;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+}
+.nav_container input:hover {
+  cursor: pointer;
+}
+.nav_container input:focus {
+  width: 250px;
+  opacity: 1;
+  cursor: text;
+}
+.nav_container input:focus ~ .search {
+  right: -200px;
+  background: #151515;
+  z-index: 6;
+}
+.nav_container input:focus ~ .search::before {
+  top: 0;
+  left: 0;
+  width: 25px;
+}
+.nav_container input:focus ~ .search::after {
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  border: none;
+  background: white;
+  border-radius: 0%;
+  transform: rotate(-45deg);
+}
+.nav_container input::placeholder {
+  color: white;
+  opacity: 0.5;
+  font-weight: bolder;
+}
